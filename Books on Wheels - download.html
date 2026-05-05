@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Books on Wheels — Bringing books to yuh foot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400..700&family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Logo (referenced from JSX) -->
+<meta name="ext-resource-dependency" content="assets/logo.png" data-resource-id="logo" />
+<meta name="ext-resource-dependency" content="assets/mobile-unit.png" data-resource-id="mobileUnit" />
+
+<!-- Book covers (referenced from JSX) -->
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0805003118-L.jpg" data-resource-id="book_0805003118" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/1564023737-L.jpg" data-resource-id="book_1564023737" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0399237488-L.jpg" data-resource-id="book_0399237488" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0679890076-L.jpg" data-resource-id="book_0679890076" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0064431789-L.jpg" data-resource-id="book_0064431789" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0670867330-L.jpg" data-resource-id="book_0670867330" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0399257748-L.jpg" data-resource-id="book_0399257748" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0670241334-L.jpg" data-resource-id="book_0670241334" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0061124958-L.jpg" data-resource-id="book_0061124958" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0142410373-L.jpg" data-resource-id="book_0142410373" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0064401847-L.jpg" data-resource-id="book_0064401847" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/1416936475-L.jpg" data-resource-id="book_1416936475" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0394820371-L.jpg" data-resource-id="book_0394820371" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/1883672589-L.jpg" data-resource-id="book_1883672589" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/1465445331-L.jpg" data-resource-id="book_1465445331" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/1465445064-L.jpg" data-resource-id="book_1465445064" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/1426338627-L.jpg" data-resource-id="book_1426338627" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0794524257-L.jpg" data-resource-id="book_0794524257" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/1465469419-L.jpg" data-resource-id="book_1465469419" />
+<meta name="ext-resource-dependency" content="https://covers.openlibrary.org/b/isbn/0823444597-L.jpg" data-resource-id="book_0823444597" />
+
+<template id="__bundler_thumbnail" data-bg-color="#F4EFE6">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F4EFE6"/>
+    <!-- truck body -->
+    <rect x="280" y="340" width="540" height="220" rx="14" fill="#F39021" stroke="#0E1830" stroke-width="8"/>
+    <rect x="820" y="400" width="160" height="160" rx="12" fill="#1E63C9" stroke="#0E1830" stroke-width="8"/>
+    <!-- windshield -->
+    <rect x="840" y="420" width="120" height="60" rx="6" fill="#F2B431" stroke="#0E1830" stroke-width="6"/>
+    <!-- book stacks on side -->
+    <rect x="320" y="380" width="80" height="20" fill="#F2B431" stroke="#0E1830" stroke-width="4"/>
+    <rect x="320" y="406" width="80" height="20" fill="#1E63C9" stroke="#0E1830" stroke-width="4"/>
+    <rect x="320" y="432" width="80" height="20" fill="#D7372A" stroke="#0E1830" stroke-width="4"/>
+    <rect x="320" y="458" width="80" height="20" fill="#2F8F3E" stroke="#0E1830" stroke-width="4"/>
+    <rect x="430" y="392" width="80" height="20" fill="#1E63C9" stroke="#0E1830" stroke-width="4"/>
+    <rect x="430" y="418" width="80" height="20" fill="#F2B431" stroke="#0E1830" stroke-width="4"/>
+    <rect x="430" y="444" width="80" height="20" fill="#0E1830"/>
+    <rect x="430" y="470" width="80" height="20" fill="#D7372A" stroke="#0E1830" stroke-width="4"/>
+    <rect x="540" y="380" width="80" height="20" fill="#2F8F3E" stroke="#0E1830" stroke-width="4"/>
+    <rect x="540" y="406" width="80" height="20" fill="#F39021" stroke="#0E1830" stroke-width="4"/>
+    <rect x="540" y="432" width="80" height="20" fill="#1E63C9" stroke="#0E1830" stroke-width="4"/>
+    <rect x="540" y="458" width="80" height="20" fill="#F2B431" stroke="#0E1830" stroke-width="4"/>
+    <!-- wheels -->
+    <circle cx="400" cy="580" r="48" fill="#0E1830"/>
+    <circle cx="400" cy="580" r="20" fill="#F4EFE6"/>
+    <circle cx="760" cy="580" r="48" fill="#0E1830"/>
+    <circle cx="760" cy="580" r="20" fill="#F4EFE6"/>
+    <!-- title -->
+    <text x="600" y="220" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="76" fill="#0E1830" letter-spacing="-2">Books on Wheels</text>
+    <text x="600" y="270" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="32" fill="#F39021">bringing books to yuh foot</text>
+  </svg>
+</template>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" src="parts-bundled/01-base.jsx"></script>
+<script type="text/babel" src="parts-bundled/02-mid.jsx"></script>
+<script type="text/babel" src="parts-bundled/03-involve.jsx"></script>
+<script type="text/babel" src="parts-bundled/04-foot.jsx"></script>
+</body>
+</html>
